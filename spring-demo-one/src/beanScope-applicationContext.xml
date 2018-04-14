@@ -15,7 +15,8 @@
 		class="com.luv2code.springdemo.HappyFortuneService">
 	</bean>
 	
-	<bean id="myCoach" class="com.luv2code.springdemo.TrackCoach">
+	<!-- if not declare scope, default scope would be Singleton -->
+	<bean id="myCoach" class="com.luv2code.springdemo.TrackCoach" scope="prototype">
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortuneService"></constructor-arg>
 	</bean>
