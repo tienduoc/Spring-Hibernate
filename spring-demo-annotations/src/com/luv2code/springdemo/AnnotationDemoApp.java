@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class AnnoationDemoApp {
+public class AnnotationDemoApp {
 
 	public static void main(String[] args) {
 		

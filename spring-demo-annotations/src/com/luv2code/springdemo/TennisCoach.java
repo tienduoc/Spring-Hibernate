@@ -1,12 +1,15 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("thatSillyCoach") // if not declare bean id, default bean id will be tennisCoach
 public class TennisCoach implements Coach {
 
 	@Autowired
+//	@Qualifier("happyFortuneService")
+	@Qualifier("randomService")
 	private FortuneService fortuneService;
 
 	// default constructor
