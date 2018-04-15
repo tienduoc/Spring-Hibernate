@@ -1,12 +1,14 @@
 package com.luv2code.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // if not declare bean id, default bean id will be tennisCoach
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	@Autowired
@@ -17,6 +19,18 @@ public class TennisCoach implements Coach {
 	// default constructor
 	public TennisCoach() {
 		System.out.println(">> TenisCoach: Inside default constructor");
+	}
+	
+	// define init-method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> TenisCoach: inside of doMyStartupStuff");
+	}
+	
+	// define destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> TenisCoach: inside of doMyCleanupStuff");
 	}
 	
 //	@Autowired
