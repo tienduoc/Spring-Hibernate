@@ -5,14 +5,12 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // if not declare bean id, default bean id will be tennisCoach
 public class TennisCoach implements Coach {
 
 	@Autowired
-//	@Qualifier("happyFortuneService")
 	@Qualifier("randomService")
 	private FortuneService fortuneService;
 
