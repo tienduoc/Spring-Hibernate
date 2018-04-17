@@ -24,6 +24,11 @@
 		<form:radiobutton path="favoriteLanguage" value="PHP" /> PHP
 		<form:radiobutton path="favoriteLanguage" value="Ruby" /> Ruby
 		<br>
+		Operating Systems:
+		<form:checkbox path="operatingSystems" value="Linux" /> Linux
+		<form:checkbox path="operatingSystems" value="Mac OS" /> Mac OS
+		<form:checkbox path="operatingSystems" value="Windows" /> Windows
+		<br>
 		<input type="submit" value="Submit" />
 	</form:form>
 </body>
