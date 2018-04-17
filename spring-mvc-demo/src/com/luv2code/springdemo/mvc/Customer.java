@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import validation.CourseCode;
+
 public class Customer {
 	
 	private String firstName;
@@ -19,10 +21,12 @@ public class Customer {
 	@Max(value = 10, message = "must be less than or equal to 10")
 	private Integer freePasses;
 	
-	@NotNull
 	@Pattern(regexp="^[a-zA-Z0-9]{5}", message = "only 5 chars/digit")
 	private String postalCode;
 
+	@CourseCode(value = "YOYO", message = "must start with YOYO")
+	private String courseCode;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -53,6 +57,14 @@ public class Customer {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 
 }
