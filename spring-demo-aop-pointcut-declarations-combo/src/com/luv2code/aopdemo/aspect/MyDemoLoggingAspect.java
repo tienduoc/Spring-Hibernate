@@ -17,7 +17,7 @@ public class MyDemoLoggingAspect {
 	private void getter() {}
 	
 	// pointcut for setter methods
-	@Pointcut("execution(* com.luv2code.aopdemo.dao.*.set*(..))")
+	@Pointcut("execution(* com.luv2code.apdemo.dao.*.set*(..))")
 	private void setter() {}
 	
 	// combine pointcut: include package & exclude getter/setter
